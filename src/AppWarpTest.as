@@ -16,9 +16,9 @@ import flash.utils.ByteArray;
 var appwarp:WarpClient;
 var outputTextField:TextField = new TextField();
 var userinputTextField:TextField = new TextField();
-var apiKey:String = "b29f4030aba3b2bc7002c4eae6815a4130c862c386e43ae2a0a092b27de1c5af";
-var secreteKey:String = "bf45f27e826039754f8dda659166d59ffb7b9dce830ac51d6e6b576ae4b26f7e";
-var roomID:String = "1440375425";
+var apiKey:String = "your api key";
+var secreteKey:String = "your room key";
+var roomID:String = "room id";
 
 var connectbtn:TextField = new TextField();
 var disconnectbtn:TextField = new TextField();
@@ -378,7 +378,7 @@ package
 			clearBtn.addEventListener(MouseEvent.CLICK,clear_click);
 			addChild(clearBtn);
 			
-			WarpClient.initialize("b29f4030aba3b2bc7002c4eae6815a4130c862c386e43ae2a0a092b27de1c5af","bf45f27e826039754f8dda659166d59ffb7b9dce830ac51d6e6b576ae4b26f7e");
+			WarpClient.initialize(apiKey,secreteKey);
 			WarpClient.enableTrace(true);
 			WarpClient.setRecoveryAllowance(100);
             appwarp = WarpClient.getInstance();
